@@ -1,10 +1,10 @@
 {% set name = "liteiclink" %}
-{% set version = "2022.12" %}
-{% set sha256 = "ba88880dc6b690dc402f32d0f3afb63c40b60645779d357f5cf7eaad38d3a5d6" %}
+{% set version = "2023.04" %}
+{% set sha256 = "0e17efd52b55e964a27ed1d031fdb7798468c26c019f43f88a2d7b842786b871" %}
 
 package:
-   name: {{ name|lower }}
-   version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   fn: {{ version }}.tar.gz
