@@ -1,6 +1,6 @@
 {% set name = "liteiclink" %}
-{% set version = "2024.08" %}
-{% set sha256 = "e41cc411551a7a53c7e670f8bc5d65e7d4e6fad456ba5f9d24a1c2409a3376a4" %}
+{% set version = "2024.12" %}
+{% set sha256 = "c1511ecfc84f24d981719c15b639de463eafd4ef76b60141f77cb9ea8a416ff0" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
 
