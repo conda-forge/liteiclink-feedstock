@@ -1,6 +1,6 @@
 {% set name = "liteiclink" %}
-{% set version = "2025.08" %}
-{% set sha256 = "6837565aa8e496c7789ae59b6fefc8c42f3a4510b6d29d6fef0ac8fb83090f77" %}
+{% set version = "2025.12" %}
+{% set sha256 = "83bf6a931a0a94fe10379c1f32bab6e399aa36cda3ed29bb21763819e9209749" %}
 
 package:
   name: {{ name|lower }}
