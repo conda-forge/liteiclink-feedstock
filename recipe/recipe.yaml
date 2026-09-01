@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  name: liteiclink
+  version: "2026.04"
+  sha256: 6e4cdf5e0bc413fdcab57a1ee3e1e59be51983871eace8981f4bcfcf999e6d44
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/enjoy-digital/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - litex ~=${{ version }}
+    - pyyaml
+
+tests:
+  - python:
+      imports:
+        - liteiclink
+      pip_check: false
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  license: BSD-2-Clause
+  license_file: LICENSE
+  summary: Small footprint and configurable Inter-Chip communication cores
+  description: Small footprint and configurable Inter-Chip communication cores
+  homepage: https://github.com/enjoy-digital/liteiclink
+  repository: https://github.com/enjoy-digital/liteiclink
+
+extra:
+  recipe-maintainers:
+    - enjoy-digital
+    - timkpaine
