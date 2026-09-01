@@ -12,7 +12,6 @@ package:
 source:
   url: https://github.com/enjoy-digital/${{ name }}/archive/refs/tags/${{ version }}.tar.gz
   sha256: ${{ sha256 }}
-  file_name: ${{ version }}.tar.gz
 
 build:
   number: 1
@@ -21,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
     - python >=${{ python_min }}
-    - litex ~=${{ version }}*
+    - litex ~=${{ version }}
     - pyyaml
 
 tests:
@@ -37,9 +36,6 @@ tests:
       python_version:
         - ${{ python_min }}
         - "*"
-  - requirements:
-      run:
-        - python ${{ python_min }}
 
 about:
   license: BSD-2-Clause
