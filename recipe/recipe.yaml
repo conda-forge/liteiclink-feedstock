@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: liteiclink
-  version: "2026.04"
-  sha256: 6e4cdf5e0bc413fdcab57a1ee3e1e59be51983871eace8981f4bcfcf999e6d44
+  version: "2026.08"
+  sha256: fc0d120abca89378e784d41fd36cf17cb07b570972243f809cf2b9946cdba5f1
 
 package:
   name: ${{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
 
