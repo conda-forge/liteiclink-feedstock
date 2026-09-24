@@ -195,6 +195,3 @@ Feedstock Maintainers
 * [@enjoy-digital](https://github.com/enjoy-digital/)
 * [@timkpaine](https://github.com/timkpaine/)
 
-
-<!-- dummy commit to enable rerendering -->
-
